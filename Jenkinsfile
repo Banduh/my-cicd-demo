@@ -1,4 +1,3 @@
-@'
 def notifyWebex(String status) {
     withCredentials([
         string(credentialsId: 'webex-bot-token', variable: 'WEBEX_TOKEN'),
@@ -45,4 +44,3 @@ pipeline {
         failure { script { notifyWebex('BUILD FAILED') } }
     }
 }
-'@ | Set-Content -Encoding ascii Jenkinsfile
