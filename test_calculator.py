@@ -17,3 +17,6 @@ class TestCalculator(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+def test_multiply():
+    from calculator import multiply
+    assert multiply(3, 4) == 12
